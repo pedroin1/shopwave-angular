@@ -1,1 +1,8 @@
-npx lint-staged
+echo "🔍 Rodando lint..."
+npx ng lint --fix
+
+echo "✨ Verificando formatação..."
+npx prettier --write "src/**/*.{ts,html,scss}"
+
+echo "🧪 Rodando testes unitários..."
+npx ng test --watch=false --browsers=ChromeHeadless
