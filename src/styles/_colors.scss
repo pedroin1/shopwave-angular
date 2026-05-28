@@ -1,0 +1,61 @@
+// ============================================================
+// SHOPWAVE — Color Tokens
+// ============================================================
+
+// Primary — Purple
+$color-primary-light: #eeedfe;
+$color-primary: #7f77dd;
+$color-primary-dark: #534ab7;
+
+// Success — Teal
+$color-success-light: #e1f5ee;
+$color-success: #1d9e75;
+$color-success-dark: #0f6e56;
+
+// Danger — Red
+$color-danger-light: #fcebeb;
+$color-danger: #e24b4a;
+$color-danger-dark: #a32d2d;
+
+// Warning — Amber
+$color-warning-light: #faeeda;
+$color-warning: #ef9f27;
+$color-warning-dark: #854f0b;
+
+// Info — Blue
+$color-info-light: #e6f1fb;
+$color-info: #378add;
+$color-info-dark: #185fa5;
+
+// Neutral — Gray
+$color-neutral-light: #f1efe8;
+$color-neutral: #888780;
+$color-neutral-dark: #2c2c2a;
+
+// ============================================================
+// Semantic aliases
+// ============================================================
+
+// Brand
+$color-brand: $color-primary;
+$color-brand-light: $color-primary-light;
+$color-brand-dark: $color-primary-dark;
+
+// Background
+$color-bg-page: $color-neutral-light;
+$color-bg-surface: #ffffff;
+$color-bg-overlay: rgba(38, 33, 92, 0.45);
+
+// Text
+$color-text-primary: $color-neutral-dark;
+$color-text-secondary: $color-neutral;
+$color-text-inverse: #ffffff;
+$color-text-brand: $color-primary-dark;
+
+// Border
+$color-border: $color-neutral-light;
+$color-border-strong: $color-neutral;
+$color-border-focus: $color-primary;
+
+// Star rating
+$color-star: $color-warning;
