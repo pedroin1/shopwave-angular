@@ -1,3 +1,71 @@
+@use 'variables' as var;
+@use 'colors' as colors;
+
 :host {
   display: block;
+  height: 100vh;
+}
+
+.login {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+
+  //LEFT SIDE
+  &__left {
+    padding: var.$spacing-stack-md var.$spacing-inline-md;
+    background-color: colors.$color-primary-dark;
+  }
+  &__logo {
+    color: colors.$color-text-inverse;
+    font-size: var.$font-size-2xl;
+
+    mat-icon {
+      font-size: var.$font-size-2xl;
+      width: var.$font-size-2xl;
+      height: var.$font-size-2xl;
+      vertical-align: middle;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__headline {
+  }
+
+  &__description {
+  }
+
+  &__features {
+  }
+
+  &__feature-item {
+  }
+
+  &__feature-icon {
+  }
+
+  &__feature-text {
+  }
+
+  &__review {
+  }
+
+  &__review-text {
+  }
+
+  &__review-footer {
+  }
+
+  &__review-author {
+  }
+
+  //RIGHT SIDE
+  &__right {
+    padding: var.$spacing-stack-md var.$spacing-inline-md;
+    background-color: colors.$color-neutral-dark;
+  }
 }

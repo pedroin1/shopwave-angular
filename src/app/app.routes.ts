@@ -1,15 +1,19 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from '@pages/login/login.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: MainLayoutComponent,
-    children: [],
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
   {
     path: 'login',
-    component: LoginComponent,
+    loadComponent: () => import('@pages/login/login.component').then((m) => m.LoginComponent),
+  },
+  {
+    path: '',
+    component: MainLayoutComponent,
+    children: [],
   },
 ];
