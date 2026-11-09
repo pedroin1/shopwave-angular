@@ -1,24 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { InputComponent } from './input.component';
 import { provideZonelessChangeDetection } from '@angular/core';
+import { MockBuilder, MockedComponentFixture, MockRender } from 'ng-mocks';
+import { InputComponent } from './input.component';
 
 describe('InputComponent', () => {
-  let component: InputComponent;
-  let fixture: ComponentFixture<InputComponent>;
+  beforeEach(() => MockBuilder(InputComponent).provide(provideZonelessChangeDetection()));
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [InputComponent],
-      providers: [provideZonelessChangeDetection()],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(InputComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  const setupTesting = (): MockedComponentFixture<InputComponent> => MockRender(InputComponent);
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = setupTesting();
+    expect(fixture.point.componentInstance).toBeTruthy();
   });
 });

@@ -1,24 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MainLayoutComponent } from './main-layout.component';
 import { provideZonelessChangeDetection } from '@angular/core';
+import { MockBuilder, MockedComponentFixture, MockRender } from 'ng-mocks';
+import { MainLayoutComponent } from './main-layout.component';
 
 describe('MainLayoutComponent', () => {
-  let component: MainLayoutComponent;
-  let fixture: ComponentFixture<MainLayoutComponent>;
+  beforeEach(() => MockBuilder(MainLayoutComponent).provide(provideZonelessChangeDetection()));
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [MainLayoutComponent],
-      providers: [provideZonelessChangeDetection()],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(MainLayoutComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  const setupTesting = (): MockedComponentFixture<MainLayoutComponent> =>
+    MockRender(MainLayoutComponent);
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = setupTesting();
+    expect(fixture.point.componentInstance).toBeTruthy();
   });
 });
