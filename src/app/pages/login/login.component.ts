@@ -11,5 +11,5 @@ import { Icons } from '@entities/icons';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
-  protected readonly icons = Icons;
+  readonly icons = Icons;
 }
